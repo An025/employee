@@ -17,7 +17,8 @@ const DepartmentList = () => {
   const setSelectedDepartment = (id) => {
     selectedDepartment = id;
   };
-  const removeDepartment = () => {
+  const removeDepartment = (e) => {
+    e.preventDefault();
     const removeArr = [...departmentCtx].filter(
       (department) => department.id !== selectedDepartment
     );

@@ -124,7 +124,8 @@ const DataList = () => {
                         <tr key={employee.id} >
                             <td >{employee.id}</td>
                             <td>{`${employee.familyName} ${employee.givenName}`}</td>
-                            <td>{getDepartmentNameById(employee.department).name}</td>
+                            <td>{getDepartmentNameById(employee.department)!== undefined?
+                                getDepartmentNameById(employee.department).name: "Törölt szervezeti egység"}</td>
                         </tr>
                     ))
                     ) : (
